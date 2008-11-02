@@ -17,6 +17,23 @@ class Hosts < Application
     render
   end
 
+  def find
+    hosts = []
+    MechFarmer::Inventory.load_from_file(Merb::Config[:inventory_file]).each do |h|
+      hosts << "<a href=/hosts/show/?hostname=#{h.hostname}>#{h.hostname}</a><br/>" if h.hostname =~ /#{params[:hostname]}/
+    end
+    hosts
+  end
+
+  def show
+    @host = nil
+    i = MechFarmer::Inventory.load_from_file(Merb::Config[:inventory_file])
+    i.each do |rh|
+      @host = rh if rh.hostname.eql? params[:hostname]
+    end
+    render
+  end
+
   def farming_results
     @ip = params[:ip]
     @mf =MechFarmer::RemoteHost.new @ip

@@ -123,8 +123,9 @@ a:hover {
 }
 
 .search-field {
-  padding-top: 40px;
+  margin-top: 40px;
   text-align: center;
+  padding: 4px;
 }
 
 .maintainers {
@@ -185,4 +186,22 @@ a:hover {
 .hostlist-count {
   text-align:center;
   padding-top: 5px;
+}
+
+#search-results {
+  text-align: center;
+  padding-top: 30px;
+}
+
+#search-results a {
+  color: #4d9b12;
+}
+#search-results a:hover {
+  color: black;
+}
+
+#spinner {
+  padding-top: 10px;
+  float: right;
+  margin-right: 48%;
 }

@@ -3,6 +3,8 @@
   %head
     %title Metch Farmer UI
     %link{:href => '/stylesheets/master.css', :media => 'screen', :rel => 'stylesheet', :type => 'text/css'}
+    - ['prototype', 'effects', 'controls'].each do |s|
+      %script{:src => "/javascripts/#{s}.js", :type => 'text/javascript'}
   %body
     .title-box
       .main-title
