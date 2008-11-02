@@ -1,0 +1,34 @@
+.host-box
+  .host-element-name
+    hostname
+  .host-element-value
+    =host.hostname
+  .host-element-name
+    routes
+    %br
+  .host-element-value
+    - host.routes.each do |r|
+      = r
+      %br
+  .host-element-name
+    firewall policy
+    %br
+  .host-element-value
+    - host.firewall_policy.each do |key,val|
+      = "#{key}: "
+      = val
+      %br
+  .host-element-name
+    IPv4 Addresses
+    %br
+  .host-element-value
+    - host.ipv4_addresses.each do |key,val|
+      = "#{key}"
+      \/
+      = val['mask']
+      %br
+  .host-element-name
+    Network Interfaces
+  .host-element-value
+    - host.net_devices.each do |d| 
+      = d

@@ -1,0 +1,23 @@
+.page-title
+  dashboard
+.op-box
+  .op-box-items
+    %a{:href => '/hosts/list'} list hosts
+    %br
+    %a{:href => '/maintainers/list'} list maintainers
+    %br
+    %br
+    %a{:href => '/maintainers/list'} add new maintainer
+    %br
+    %a{:href => '/hosts/farm'} farm new host
+
+.search-field
+  %b
+    yes sir?
+  = text_field
+
+.footer
+  a
+  %strong
+    %a{:href => 'http://github.com/rubiojr/mech_farmer'} Mech Farmer
+  UI

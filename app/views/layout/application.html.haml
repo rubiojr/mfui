@@ -1,0 +1,15 @@
+!!! HTML
+%html 
+  %head
+    %title Metch Farmer UI
+    %link{:href => '/stylesheets/master.css', :media => 'screen', :rel => 'stylesheet', :type => 'text/css'}
+  %body
+    .title-box
+      .main-title
+        %a{:href=>'/'}mfui
+      .main-subtitle
+        inventory kung-fu
+    .content
+      = message[:notice]
+      = catch_content :for_layout
+

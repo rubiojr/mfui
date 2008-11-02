@@ -1,0 +1,10 @@
+=params[:foo]
+.page-title let's face it, crap is everywhere...
+.hostlist-count
+  %b
+    = @items.size
+  hosts found
+
+.hosts
+  =partial :host, :with => @items, :layout => false
+

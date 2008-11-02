@@ -1,0 +1,7 @@
+.page-title farming
+.search-field
+  = form(:action => 'farming_results', :method => 'post') do
+    host to farm?
+    = text_field :name => 'ip'
+    = submit 'farm'
+
