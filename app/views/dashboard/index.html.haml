@@ -21,9 +21,8 @@
 = " <script type='text/javascript'> new Form.Element.Observer('searchbox', 3, function(element, value) { Element.show('spinner'); new Ajax.Updater('search-results', '/hosts/find/?hostname=' + value, {  asynchronous:true, evalScripts:true, onSuccess:function(request){Element.hide('spinner')} }) }) </script> "
 
 #search-results
-
-.footer
-  a
-  %strong
-    %a{:href => 'http://github.com/rubiojr/mech_farmer'} Mech Farmer
-  UI
+  .footer
+    a
+    %strong
+      %a{:href => 'http://github.com/rubiojr/mech_farmer'} Mech Farmer
+    UI

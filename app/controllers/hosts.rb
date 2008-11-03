@@ -19,6 +19,7 @@ class Hosts < Application
 
   def find
     hosts = []
+    return "type something dude" if params[:hostname].empty?
     MechFarmer::Inventory.load_from_file(Merb::Config[:inventory_file]).each do |h|
       hosts << "<a href=/hosts/show/?hostname=#{h.hostname}>#{h.hostname}</a><br/>" if h.hostname =~ /#{params[:hostname]}/
     end
