@@ -1,16 +1,17 @@
 .page-title farming results
+
 .host-box
   .host-element
     .host-element-name
       hostname
     .host-element-value
-      =@mf.hostname
+      =@last_farmed.hostname
   .host-element
     .host-element-name
       routes
       %br
     .host-element-value
-      - @mf.routes.each do |r|
+      - @last_farmed.routes.each do |r|
         = r
         %br
   .host-element
@@ -18,8 +19,11 @@
       firewall policy
       %br
     .host-element-value
-      - @mf.firewall_policy.each do |key,val|
+      - @last_farmed.firewall_policy.each do |key,val|
         = "#{key}: "
         = val
         %br
 
+.add-link
+  %a{:href => "/hosts/add/#{@last_farmed.hostname}"}
+    add to inventory

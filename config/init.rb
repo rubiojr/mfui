@@ -8,7 +8,7 @@ use_template_engine :haml
  
 Merb::Config.use do |c|
   c[:use_mutex] = false
-  c[:session_store] = 'cookie'  # can also be 'memory', 'memcache', 'container', 'datamapper
+  c[:session_store] = 'memory'  # can also be 'memory', 'memcache', 'container', 'datamapper
   
   # cookie session store configuration
   c[:session_secret_key]  = '4f68203338f9ec1cd1af919b469f6efd050a9275'  # required for cookie session store
@@ -23,5 +23,6 @@ Merb::BootLoader.after_app_loads do
   # This will get executed after your app's classes have been loaded.
 end
 
-Merb::Config[:inventory_file] = '/home/rubiojr/Work/csic/inventory/full.yaml'
-Merb::Config[:maintainers_file] = '/home/rubiojr/Work/csic/inventory/maintainers.yaml'
+Merb::Config[:inventory_file] = '/home/rubiojr/Work/github/mfui/data/inventory.yaml'
+Merb::Config[:maintainers_file] = '/home/rubiojr/Work/github/mfui/data/maintainers.yaml'
+Merb::Config[:inventory] = MechFarmer::Inventory.load_from_file(Merb::Config[:inventory_file])

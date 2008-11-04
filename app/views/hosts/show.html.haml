@@ -2,3 +2,5 @@
 .hosts
   =partial :host, :with => [@host], :layout => false
 
+= delete_button("/hosts/delete/#{@host.hostname}")
+

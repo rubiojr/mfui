@@ -205,3 +205,40 @@ a:hover {
   float: right;
   margin-right: 48%;
 }
+
+.add-link {
+  text-align: right;
+  padding-right: 10px;
+}
+
+.add-link a {
+  color: black;
+}
+.add-link a:hover {
+  color: #FFD116;
+}
+
+.form-input {
+  margin-top: 40px;
+  text-align: left;
+  margin-left: 30%;
+  margin-right: 30%;
+  background: white;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+}
+
+.form-title {
+  font-weight: bold;
+  background-color: black;
+  padding: 5px;
+  color: #FFD116;
+}
+
+.form-buttons {
+  text-align: right;
+}
+
+.form-field {
+  padding: 6px;
+}

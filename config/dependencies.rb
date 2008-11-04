@@ -22,3 +22,5 @@ dependency "dm-timestamps", dm_gems_version
 dependency "dm-types", dm_gems_version        
 dependency "dm-validations", dm_gems_version  
 dependency "mech_farmer", '0.0.8'
+
+require 'mech_farmer'

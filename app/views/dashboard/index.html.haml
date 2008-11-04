@@ -7,7 +7,7 @@
     %a{:href => '/maintainers/list'} list maintainers
     %br
     %br
-    %a{:href => '/maintainers/list'} add new maintainer
+    %a{:href => '/maintainers/new'} add new maintainer
     %br
     %a{:href => '/hosts/farm'} farm new host
 
@@ -18,7 +18,7 @@
     = text_field(:id => 'searchbox')
     %img{:src =>'images/spinner.gif', :id => 'spinner', :style => 'display: none'}
 
-= " <script type='text/javascript'> new Form.Element.Observer('searchbox', 3, function(element, value) { Element.show('spinner'); new Ajax.Updater('search-results', '/hosts/find/?hostname=' + value, {  asynchronous:true, evalScripts:true, onSuccess:function(request){Element.hide('spinner')} }) }) </script> "
+= " <script type='text/javascript'> new Form.Element.Observer('searchbox', 2, function(element, value) { Element.show('spinner'); new Ajax.Updater('search-results', '/hosts/find/?hostname=' + value, {  asynchronous:true, evalScripts:true, onSuccess:function(request){Element.hide('spinner')} }) }) </script> "
 
 #search-results
   .footer
