@@ -1,0 +1,19 @@
+.page-title hosts
+
+%center{:style => "padding-top: 20px"}
+  - if @added
+    %b Added!
+  - else
+    %b Failed!
+  %br
+  %br
+  host
+  - if @added
+    = session[:last_farmed].hostname
+    %b
+      added to inventory
+  - else
+    = session[:last_farmed].hostname
+    %b
+      is already in the inventory
+

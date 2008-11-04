@@ -1,0 +1,28 @@
+.page-title maintainers
+
+.form-input
+  = form(:action => 'add', :method => 'post') do
+    .form-title
+      Maintainer Details
+    %br
+    .form-field
+      .form-field-label
+        %label
+        First Name
+      .form-field-text
+        = text_field :name => 'first_name'
+    .form-field
+      .form-field-label
+        %label
+        Surname
+      .form-field-text
+        = text_field :name => 'surname'
+    .form-field
+      .form-field-label
+        %label
+        Email
+      .form-field-text
+        = text_field :name => 'email'
+
+    .form-buttons
+      = submit 'Add'

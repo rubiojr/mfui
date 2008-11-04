@@ -1,0 +1,16 @@
+.page-title hosts
+
+%center{:style => "padding-top: 20px"}
+  - if @deleted
+    %b Deleted!
+  - else
+    %b Failed!
+  %br
+  %br
+  host
+  = @hostname
+  - if @deleted
+    deleted from inventory
+  - else
+    %b
+      not in inventory
